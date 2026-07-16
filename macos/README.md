@@ -45,16 +45,6 @@ Install location after step 2:
 | State / logs / user images | `~/Library/Application Support/CodexDreamSkinStudio` |
 | Theme backup | under Application Support (`theme-backup.json`) |
 
-## Customer ZIP (optional packaging)
-
-To build the “double-click install” folder layout for non-git users:
-
-```bash
-./scripts/build-client-release.sh "$HOME/Desktop/Codex 主题编辑器.zip"
-```
-
-That ZIP contains a visible installer plus a hidden `.codex-dream-skin-studio` engine. Do not ship only CSS/images.
-
 ## How it works (security boundary)
 
 1. Discover `com.openai.codex` and validate signature / Team ID / arch / bundled Node.
@@ -95,26 +85,8 @@ Reset to the bundled abstract demo:
 
 MIT — see `LICENSE`. Additional notices in `NOTICE.md` (trademarks, demo asset, runtime Node).
 
-## Sponsors
-
-Thanks to **[passion8.cc](https://passion8.cc/register?aff=TuPe)** for sponsoring this project.
-
-<p align="center">
-  <a href="https://passion8.cc/register?aff=TuPe">
-    <img src="../docs/images/sponsor-passion8.png" alt="Passion8" height="96">
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://passion8.cc/register?aff=TuPe"><strong>Passion8｜感谢 passion8.cc 赞助本项目</strong></a><br>
-  AI API 中转站，支持 Codex / Claude Code / Grok 等工具接入。主题与 API 配置互相独立。
-</p>
-
 ## What this is not
 
 - Not an OpenAI product and not a fork of Codex source
 - Not a way to patch or rebrand the official binary
-- Not a Windows build (see `../windows/`)
 - Not an API proxy: theming does not change model providers or API keys
-
-If you use a third-party API relay, configure it separately — keep theme install and API config as two explicit steps.
